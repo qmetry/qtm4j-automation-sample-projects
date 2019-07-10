@@ -1,0 +1,85 @@
+{
+	"info": {
+		"name": "AutomationAPI - Cloud",
+		"_postman_id": "cd549972-8488-4fbb-28bc-f60c62371284",
+		"description": "Import test result is 2 step process\n1. Get upload URL\n2. Upload file",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get upload file URL",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"awsurl\", jsonData.url);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "apiKey",
+						"value": "cdcfb80d9f75a78e34b176efbadd8d40853a4df026418db1e50f66a8ebd6c41763551089c2131c6ad653a7670d8d1362f163f612eb1cb1512d6a7"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"format\": \"cucumber\"\n}"
+				},
+				"url": {
+					"raw": "https://qtmcloud.qmetry.com/rest/api/automation/importresult",
+					"protocol": "https",
+					"host": [
+						"qtmcloud",
+						"qmetry",
+						"com"
+					],
+					"path": [
+						"rest",
+						"api",
+						"automation",
+						"importresult"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Upload file",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data"
+					}
+				],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": ""
+					}
+				},
+				"url": {
+					"raw": "{{awsurl}}",
+					"host": [
+						"{{awsurl}}"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
