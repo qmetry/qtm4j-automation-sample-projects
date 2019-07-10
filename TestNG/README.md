@@ -20,7 +20,7 @@ please update these details in `pom.xml` file.
 		<code>&lt;plugin&gt;</code>
 			<code>&lt;groupId&gt;com.qmetry&lt;/groupId&gt;</code>
 			<code>&lt;artifactId&gt;automation&lt;/artifactId&gt;</code>
-			<code>&lt;version&gt;1.0.2&lt;/version&gt;</code>
+			<code>&lt;version&gt;2.0.0&lt;/version&gt;</code>
 			<code>&lt;executions&gt;</code>
 				<code>&lt;execution&gt;</code>
 					<code>&lt;phase&gt;test&lt;/phase&gt;</code>
@@ -58,34 +58,34 @@ please update these details in `pom.xml` file.
 </div>
 <div class="m-t-sm">
 	<label>Configure below properties:</label>
-    <pre class="select-block code-block"><code>automation.qmetry.enabled = true</code>
-<code>automation.qmetry.url = https://importresults.qmetry.com/QmetryWisdom/importresults-qtm4j</code>
-<code>automation.qmetry.apikey = aed606a7609feca7c4ac801677b7f825249d7358df9b72c3a2b9a91b046efb8e</code>
-<code>automation.qmetry.filepath = /target/surefire-reports/testng-results.xml</code>
-<code>automation.qmetry.testrunname = Test Run</code>
-<code>automation.qmetry.labels = lbl1,lbl2</code>
-<code>automation.qmetry.components = com1,com2</code>
-<code>automation.qmetry.version = v1,v2</code>
-<code>automation.qmetry.sprint = sprint1</code>
-<code>automation.qmetry.platform = chrome</code>
-<code>automation.qmetry.comment = this is test run comment</code>
-<code>automation.qmetry.testrunkey = </code>
-<code>automation.qmetry.testassethierarchy = TestCase-TestStep</code>
-<code>automation.qmetry.jirafields = </code>
+    <pre class="select-block code-block">
+
+<code>automation.qmetry.enabled = true</code>
 <code>automation.qmetry.debug = true</code>
-<code>automation.qmetry.testcaseupdatelevel=0</code>
+<code>automation.qmetry.url=https://qtmcloud.qmetry.com/rest/api/automation/importresult</code>
+<code>automation.qmetry.apikey = 366f41cf6659c66e02dddd965efd8fde002979b55e4d1f6b52908f93b82ad8487a7edb49262cd350009b89025f7546b7667765f80888b9308566e78b6120872</code>
+<code>automation.qmetry.filepath=target/surefire-reports/testng-results.xml</code>
+<code>automation.qmetry.environment=env</code>
+<code>automation.qmetry.build=build</code>
+<code>automation.qmetry.attachfile=true</code>
+<code>automation.qmetry.testCycleToReuse=NR-TR-1</code>
+<code>automation.qmetry.testcycle.summary=summary</code>
+<code>automation.qmetry.testcycle.labels=l1,l2,l3</code>
+<code>automation.qmetry.testcycle.components=c1,c2,c3</code>
+<code>automation.qmetry.testcycle.priority=High</code>
+<code>automation.qmetry.testcycle.status=To Do</code>
+<code>automation.qmetry.testcycle.sprintId=1242</code>
+<code>automation.qmetry.testcycle.fixVersionId=14234</code>
+<code>automation.qmetry.testcase.labels=l1,l2,l3</code>
+<code>automation.qmetry.testcase.components=c1,c2</code>
+<code>automation.qmetry.testcase.priority=priority</code>
+<code>automation.qmetry.testcase.status=status</code>
+<code>automation.qmetry.testcase.sprintId=34534</code>
+<code>automation.qmetry.testcase.fixVersionId=35345</code>
 	</pre>
 </div>
 
-<div class="m-t-sm">
-    <label>if you are using on premise JIRA, then configure below properties as well:</label>
-    <pre class="select-block code-block"><code>automation.qmetry.authorization=Basic YWRtaW46YWRtaW4=</code>
-    	<code>OR</code>
-<code>automation.qmetry.username = admin</code>
-<code>automation.qmetry.password = admin</code>	
-	</pre>
-    <label>Once the file is configured, the automation test results will get uploaded automatically whenever the user executes the automation project (e.g. using 'mvn test').</label>
-</div></div>
+</div>
 
 After providing these details, you are ready to start test.
 
