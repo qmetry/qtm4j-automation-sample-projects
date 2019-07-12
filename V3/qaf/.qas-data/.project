@@ -1,0 +1,16 @@
+{
+    "additionalFields": {
+        "web": {
+            "baseurl": "https://www.google.com"
+        }
+    },
+    "framework": "qaf",
+    "language": "java",
+    "projectSettings": {
+        "projectName": "qaf",
+        "projectPath": "/Hiten/QmetryAutomationWorkSpace/GitProjects"
+    },
+    "projectTypes": [
+        "web"
+    ]
+}
