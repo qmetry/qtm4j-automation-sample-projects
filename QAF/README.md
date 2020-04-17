@@ -84,6 +84,12 @@ please update these details in `pom.xml` file.
 <code>automation.qmetry.testcase.fixVersionId=35345</code>
 	</pre>
 </div>
+<div class="m-t-sm">
+    <label>if you are using on premise JIRA, then configure below properties as well:</label>
+    <pre class="select-block code-block"><code>automation.qmetry.authorization=Basic YWRtaW46YWRtaW4=</code>
+	</pre>
+    <label>Once the file is configured, the automation test results will get uploaded automatically whenever the user executes the automation project (e.g. using 'mvn test').</label>
+</div>
 </div>
 
 After providing these details, you are ready to start test.
