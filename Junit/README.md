@@ -20,7 +20,7 @@ please update these details in `pom.xml` file.
 		<code>&lt;plugin&gt;</code>
 			<code>&lt;groupId&gt;com.qmetry&lt;/groupId&gt;</code>
 			<code>&lt;artifactId&gt;automation&lt;/artifactId&gt;</code>
-			<code>&lt;version&gt;2.0.0&lt;/version&gt;</code>
+			<code>&lt;version&gt;2.0.2&lt;/version&gt;</code>
 			<code>&lt;executions&gt;</code>
 				<code>&lt;execution&gt;</code>
 					<code>&lt;phase&gt;test&lt;/phase&gt;</code>
@@ -88,7 +88,11 @@ please update these details in `pom.xml` file.
 </div>
 <div class="m-t-sm">
     <label>if you are using on premise JIRA, then configure below properties as well:</label>
-    <pre class="select-block code-block"><code>automation.qmetry.authorization=Basic YWRtaW46YWRtaW4=</code>
+    <pre class="select-block code-block">
+    <code>#Add below property for Basic Authentication</code>
+    <code>automation.qmetry.authorization=Basic YWRtaW46YWRtaW4=</code><br />
+    <code>#Update below property to change server url</code>
+    <code>automation.qmetry.url=https://<JIRA Base URL>/rest/qtm4j/automation/latest/importresult</code>
 	</pre>
     <label>Once the file is configured, the automation test results will get uploaded automatically whenever the user executes the automation project (e.g. using 'mvn test').</label>
 </div>

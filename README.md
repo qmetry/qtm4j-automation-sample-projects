@@ -1,3 +1,3 @@
 # QMetry Test Management for JIRA v4.0
 
-These automation project samples are only for QMetry Test Management for JIRA Cloud app v4.0 and later. 
+This repository contains sample automation projects like Cucumber/TestNG/JUnit/QAF which are working with QMetry for JIRA cloud/server app v4.0 and above.
