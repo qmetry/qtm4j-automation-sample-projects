@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "31ae0406-af16-4807-9eae-8e76e0826856",
+		"_postman_id": "10f7b257-db1c-43ac-9740-20f969c33c19",
 		"name": "Automation",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,7 +11,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "909d5e8c-376f-47d7-81cd-05dd770d4351",
+						"id": "5dabe61d-04bd-4c31-917e-f4ae448e7ea7",
 						"exec": [
 							"let response = pm.response.json();",
 							"let uid = response.url;",
@@ -28,7 +28,7 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "admin",
+							"value": "passgwhjogjrd",
 							"type": "string"
 						},
 						{
@@ -54,7 +54,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{  \r\n    \"format\":\"CUCUMBER\",\r\n    \"zip\" : false,\r\n    \"fields\":{  \r\n       \"testCycle\":{  \r\n          \"summary\":\"NEW Test cycle\",\r\n          \"priority\" : \"Blocker\",\r\n          \"status\" : \"To Do\"\r\n       },\r\n       \"testCase\":{  \r\n          \"priority\" : \"Blocker\",\r\n          \"status\" : \"To Do\"\r\n         \r\n       }\r\n    }\r\n   }"
+					"raw": "{\n    \"format\": \"CUCUMBER\"\n}"
 				},
 				"url": {
 					"raw": "{{url}}/rest/qmetry/automation/latest/importresult",
@@ -70,210 +70,7 @@
 					]
 				}
 			},
-			"response": [
-				{
-					"name": "request boyd with whole fields",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "apiKey",
-								"value": "{{apiKey}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{  \r\n    \"format\":\"CUCUMBER\",\r\n    \"zip\" : false,\r\n    \"fields\":{  \r\n       \"testCycle\":{  \r\n          \"summary\":\"NEW Test cycle\",\r\n          \"priority\" : \"Blocker\",\r\n          \"status\" : \"To Do\",\r\n          \"labels\" : [\"label1\"],\r\n          \"components\" : [\"c1\"],\r\n          \"sprintId\" : 2,\r\n          \"fixVersionId\" : 10001\r\n       },\r\n       \"testCase\":{  \r\n          \"priority\" : \"Blocker\",\r\n          \"status\" : \"To Do\",\r\n          \"labels\" : [\"label1\"],\r\n          \"components\" : [\"c1\"],\r\n          \"sprintId\" : 2,\r\n          \"fixVersionId\" : 10001\r\n         \r\n       }\r\n    }\r\n   }"
-						},
-						"url": {
-							"raw": "{{url}}/rest/qmetry/automation/latest/importresult",
-							"host": [
-								"{{url}}"
-							],
-							"path": [
-								"rest",
-								"qmetry",
-								"automation",
-								"latest",
-								"importresult"
-							]
-						}
-					},
-					"_postman_previewlanguage": "Text",
-					"header": [],
-					"cookie": [],
-					"body": ""
-				},
-				{
-					"name": "Import result summary",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "apiKey",
-								"value": "{{apiKey}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{  \r\n    \"format\":\"CUCUMBER\",\r\n    \"fields\":{  \r\n       \"testCycle\":{  \r\n          \"summary\":\"NEW Test cycle\",\r\n          \"sprintId\" :6,\r\n          \"priority\" : \"Blocker\",\r\n          \"fixVersionId\" : 10002,\r\n          \"labels\" : [\"UI\",\"Backend\"],\r\n          \"components\" : [\"Component1\"],\r\n          \"status\" : \"Done\"\r\n       },\r\n       \"testCase\":{  \r\n          \"sprintId\" :6,\r\n          \"priority\" : \"Blocker\",\r\n          \"fixVersionId\" : 10002,\r\n          \"labels\" : [\"UI\",\"Backend\"],\r\n          \"components\" : [\"Component1\"],\r\n          \"status\" : \"Done\"\r\n         \r\n       }\r\n    }\r\n   }"
-						},
-						"url": {
-							"raw": "https://qtmcloud.qmetry.com/rest/api/automation/importresult",
-							"protocol": "https",
-							"host": [
-								"qtmcloud",
-								"qmetry",
-								"com"
-							],
-							"path": [
-								"rest",
-								"api",
-								"automation",
-								"importresult"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Date",
-							"value": "Sat, 05 Oct 2019 09:14:04 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json;charset=UTF-8"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Methods",
-							"value": "GET,POST,DELETE,PUT,OPTIONS"
-						},
-						{
-							"key": "Access-Control-Allow-Headers",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Credentials",
-							"value": "true"
-						},
-						{
-							"key": "Access-Control-Max-Age",
-							"value": "180"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": 400,\n    \"errorMessage\": \"The supplied fields are invalid\",\n    \"errors\": [\n        \"Sprint '6' does not exist\",\n        \"Sprint '6' does not exist\"\n    ],\n    \"timestamp\": \"05/Oct/2019 09:14\"\n}"
-				},
-				{
-					"name": "with project2",
-					"originalRequest": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"name": "Content-Type",
-								"value": "application/json",
-								"type": "text"
-							},
-							{
-								"key": "apiKey",
-								"value": "{{apiKey}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{  \r\n    \"format\":\"CUCUMBER\",\r\n    \"fields\":{  \r\n       \"testCycle\":{  \r\n          \"summary\":\"NEW Test cycle\",\r\n          \"sprintId\" :19\r\n       },\r\n       \"testCase\":{  \r\n          \"sprintId\" :19\r\n         \r\n       }\r\n    }\r\n   }"
-						},
-						"url": {
-							"raw": "https://qtmcloud.qmetry.com/rest/api/automation/importresult",
-							"protocol": "https",
-							"host": [
-								"qtmcloud",
-								"qmetry",
-								"com"
-							],
-							"path": [
-								"rest",
-								"api",
-								"automation",
-								"importresult"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Date",
-							"value": "Sat, 05 Oct 2019 09:15:41 GMT"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json;charset=UTF-8"
-						},
-						{
-							"key": "Transfer-Encoding",
-							"value": "chunked"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Methods",
-							"value": "GET,POST,DELETE,PUT,OPTIONS"
-						},
-						{
-							"key": "Access-Control-Allow-Headers",
-							"value": "*"
-						},
-						{
-							"key": "Access-Control-Allow-Credentials",
-							"value": "true"
-						},
-						{
-							"key": "Access-Control-Max-Age",
-							"value": "180"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"status\": 400,\n    \"errorMessage\": \"The supplied fields are invalid\",\n    \"errors\": [\n        \"Sprint '19' does not exist\",\n        \"Sprint '19' does not exist\"\n    ],\n    \"timestamp\": \"05/Oct/2019 09:15\"\n}"
-				}
-			]
+			"response": []
 		},
 		{
 			"name": "submit job",
@@ -313,7 +110,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/D:/QTM4J Cloud_Revamp/QTM4j Automation/Cucumber-zip-testing/cucumber_small.json"
+							"src": "/cucumber_small.json"
 						}
 					]
 				},
